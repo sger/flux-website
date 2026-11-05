@@ -1,0 +1,7 @@
+fn greet(name: String) -> Unit {
+    print("Hello, " + name)
+}
+
+fn main() with IO {
+    greet("Flux")
+}

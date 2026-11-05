@@ -1,0 +1,9 @@
+data Person { Person { name: String, age: Int } }
+
+fn main() with IO {
+    let alice = Person { name: "Alice", age: 30 }
+    let bob = { ...alice, name: "Bob", age: alice.age + 1 }
+    print(alice.name)
+    print(bob.name)
+    print(bob.age)
+}

@@ -1,0 +1,10 @@
+data Color { Red, Green, Blue } deriving (Show)
+
+fn render<a: Show>(x: a) -> String {
+    show(x)
+}
+
+fn main() with IO {
+    print(show(Red))
+    print(render(Green))
+}

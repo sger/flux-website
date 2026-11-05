@@ -1,0 +1,14 @@
+type Shape = Circle(Float) | Rect(Float, Float)
+
+fn area(s) {
+    match s {
+        Circle(r)    -> 3.14159 * r * r,
+        Rect(w, h)   -> w * h,
+    }
+}
+
+fn main() with IO {
+    let shapes = [Circle(2.0), Rect(3.0, 4.0)]
+    let total  = fold(map(shapes, area), 0.0, \(acc, a) -> acc + a)
+    print("total area = " + to_string(total))
+}

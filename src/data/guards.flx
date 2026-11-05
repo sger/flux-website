@@ -1,0 +1,14 @@
+fn grade(score) {
+    match score {
+        Some(v) if v >= 90 -> "A",
+        Some(v) if v >= 80 -> "B",
+        Some(v) if v >= 70 -> "C",
+        Some(_) -> "D",
+        _ -> "N/A",
+    }
+}
+
+fn main() with IO {
+    print(grade(Some(82)))
+    print(grade(None))
+}

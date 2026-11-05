@@ -1,0 +1,21 @@
+import Flow.Async exposing (..)
+
+fn left() -> Int with Async {
+    sleep(60)
+    10
+}
+
+fn right() -> Int with Async {
+    sleep(20)
+    20
+}
+
+fn body() -> (Int, Int) with Async {
+    both(left, right)
+}
+
+fn main() with IO {
+    let pair = run_async(body)
+    print("left = " + to_string(pair.0))
+    print("right = " + to_string(pair.1))
+}

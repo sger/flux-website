@@ -1,0 +1,14 @@
+effect Audit {
+    log: String -> Int
+}
+
+fn audited_value() -> Int with Audit {
+    perform Audit.log("started") + 1
+}
+
+fn main() with IO {
+    let value = audited_value() handle Audit {
+        log(resume, message) -> resume(len(message))
+    }
+    print("audit_value=" + to_string(value))   // "audit_value=8"
+}

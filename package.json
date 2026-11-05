@@ -1,0 +1,19 @@
+{
+  "name": "flux-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "check:links": "node scripts/check-links.mjs"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "4.3.3",
+    "shiki": "4.5.0",
+    "tailwindcss": "4.3.3"
+  }
+}
